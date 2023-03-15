@@ -1,0 +1,4 @@
+FROM openjdk:17
+ADD target/jenkins-test-project-simple.jar docker-test-app.jar
+ENTRYPOINT ["java","-jar","docker-test-app.jar"]
+EXPOSE 6060

@@ -2,6 +2,10 @@ package org.example;
 
 public class Test {
     public static void main(String[] args) {
-        System.out.println("Test Class");
+        try {
+            System.out.println("Test Class");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 }

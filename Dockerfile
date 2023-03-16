@@ -1,5 +1,4 @@
-FROM eclipse-temurin:17-jdk-jammy
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} demo.jar
-ENTRYPOINT ["java","-jar","demo.jar"]
+FROM openjdk:17
+ADD target/jenkins-test-project-simple.jar app.jar
+ENTRYPOINT ["java","-jar","app.jar"]
 EXPOSE 6060
